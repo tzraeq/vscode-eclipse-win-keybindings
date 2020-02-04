@@ -1,0 +1,140 @@
+{
+    "contributes": {
+        "keybindings": [
+            {
+                "key": "ctrl+c",
+                "command": "editor.action.clipboardCopyAction",
+                "when": "textInputFocus"
+            },
+            {
+                "key": "ctrl+c",
+                "command": "workbench.action.terminal.copySelection",
+                "when": "terminalFocus && terminalTextSelected"
+            },
+            {
+                "key": "ctrl+c",
+                "command": "execCopy"
+            },
+            {
+                "key": "ctrl+c",
+                "command": "keybindings.editor.copyKeybindingEntry",
+                "when": "inKeybindings && keybindingFocus"
+            },
+            {
+                "key": "ctrl+c",
+                "command": "editor.action.webvieweditor.copy",
+                "when": "!editorFocus && !inputFocus && activeEditor == 'WebviewEditor'"
+            },
+            {
+                "key": "ctrl+c",
+                "command": "filesExplorer.copy",
+                "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+            },
+            {
+                "key": "ctrl+v",
+                "command": "execPaste"
+            },
+            {
+                "key": "ctrl+v",
+                "command": "editor.action.clipboardPasteAction",
+                "when": "textInputFocus && !editorReadonly"
+            },
+            {
+                "key": "ctrl+v",
+                "command": "editor.action.webvieweditor.paste",
+                "when": "!editorFocus && !inputFocus && activeEditor == 'WebviewEditor'"
+            },
+            {
+                "key": "ctrl+v",
+                "command": "workbench.action.terminal.paste",
+                "when": "terminalFocus"
+            },
+            {
+                "key": "ctrl+v",
+                "command": "filesExplorer.paste",
+                "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+            },
+            {
+                "key": "ctrl+s",
+                "command": "workbench.action.files.save"
+            },
+            {
+                "key": "ctrl+a",
+                "command": "workbench.action.terminal.selectAll",
+                "when": "terminalFocus"
+            },
+            {
+                "key": "ctrl+a",
+                "command": "editor.action.selectAll",
+                "when": "textInputFocus"
+            },
+            {
+                "key": "ctrl+a",
+                "command": "list.selectAll",
+                "when": "listFocus && listSupportsMultiselect && !inputFocus"
+            },
+            {
+                "key": "ctrl+a",
+                "command": "editor.action.webvieweditor.selectAll",
+                "when": "!editorFocus && !inputFocus && activeEditor == 'WebviewEditor'"
+            },
+            {
+                "key": "ctrl+y",
+                "command": "redo",
+                "when": "textInputFocus && !editorReadonly"
+            },
+            {
+                "key": "ctrl+z",
+                "command": "undo",
+                "when": "textInputFocus && !editorReadonly"
+            },
+            {
+                "key": "ctrl+f",
+                "command": "actions.find"
+            },
+            {
+                "key": "ctrl+s",
+                "command": "workbench.action.files.save"
+            },
+            {
+                "key": "shift+enter",
+                "command": "editor.action.insertLineAfter",
+                "when": "editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "shift+ctrl+enter",
+                "command": "editor.action.insertLineBefore",
+                "when": "editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "ctrl+x",
+                "command": "execCut"
+            },
+            {
+                "key": "ctrl+x",
+                "command": "filesExplorer.cut",
+                "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+            },
+            {
+                "key": "ctrl+x",
+                "command": "editor.action.webvieweditor.cut",
+                "when": "!editorFocus && !inputFocus && activeEditor == 'WebviewEditor'"
+            },
+            {
+                "key": "ctrl+x",
+                "command": "editor.action.clipboardCutAction",
+                "when": "textInputFocus && !editorReadonly"
+            },
+            {
+                "key": "ctrl+enter",
+                "command": "workbench.action.submitComment",
+                "when": "commentEditorFocused"
+            },
+            {
+                "key": "ctrl+enter",
+                "command": "scm.acceptInput",
+                "when": "scmRepository"
+            }
+        ]
+    }
+}

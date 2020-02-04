@@ -1,7 +1,9 @@
-# Eclipse Keymap for Visual Studio Code
+# Eclipse Windows Keymap for Visual Studio Code
 
-This extension ports popular Eclipse keyboard shortcuts to Visual Studio Code.
-Eclipse key bindings are provided for Windows, Linux and macOS.
+Thanks to alphabotsec !
+
+This extension ports popular Eclipse Windows keyboard shortcuts to Visual Studio Code.
+Eclipse windows key bindings are provided for Windows, Linux and macOS.
 
 
 ## What key bindings are included?
@@ -16,9 +18,9 @@ For a full list of the 40+ key bindings have a look at the extension's contribut
 
 We may have missed a keyboard shortcut. If we did please help us out! It is very easy to make a PR. 
 
-1. Head over to our [GitHub repository](https://github.com/alphabotsec/vscode-eclipse-keybindings). 
-2. Open the [`package.json` file](https://github.com/alphabotsec/vscode-eclipse-keybindings/blob/master/package.json). 
-3. Add a JSON object to [`contributes.keybindings`](https://github.com/alphabotsec/vscode-eclipse-keybindings/blob/master/package.json). 
+1. Head over to our [GitHub repository](https://github.com/tzraeq/vscode-eclipse-win-keybindings). 
+2. Open the [`package.json` file](https://github.com/tzraeq/vscode-eclipse-win-keybindings/blob/master/package.json). 
+3. Add a JSON object to [`contributes.keybindings`](https://github.com/tzraeq/vscode-eclipse-win-keybindings/blob/master/package.json). 
 4. Open a pull request.
 
 ## License

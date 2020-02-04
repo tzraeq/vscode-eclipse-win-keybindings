@@ -1,9 +1,9 @@
 {
-    "name": "vscode-eclipse-keybindings",
-    "displayName": "Eclipse Keymap",
-    "description": "Eclipse keybindings for Visual Studio Code",
-    "version": "0.10.0",
-    "publisher": "alphabotsec",
+    "name": "vscode-eclipse-win-keybindings",
+    "displayName": "Eclipse Win Keymap",
+    "description": "Eclipse win keybindings for Visual Studio Code",
+    "version": "0.20.0",
+    "publisher": "tzraeq",
     "engines": {
         "vscode": "^1.6.0"
     },
@@ -17,23 +17,106 @@
     "icon": "vscode-eclipse-keybindings.png",
     "repository": {
         "type": "git",
-        "url": "https://github.com/alphabotsec/vscode-eclipse-keybindings.git"
+        "url": "https://github.com/tzraeq/vscode-eclipse-win-keybindings.git"
     },
     "homepage": "https://www.alphabot.com/",
     "bugs": {
-        "url": "https://github.com/alphabotsec/vscode-eclipse-keybindings/issues"
+        "url": "https://github.com/tzraeq/vscode-eclipse-win-keybindings/issues"
     },
     "contributes": {
         "keybindings": [
             {
-                "mac": "cmd+3",
+                "key": "ctrl+c",
+                "command": "editor.action.clipboardCopyAction",
+                "when": "textInputFocus"
+            },
+            {
+                "key": "ctrl+c",
+                "command": "workbench.action.terminal.copySelection",
+                "when": "terminalFocus && terminalTextSelected"
+            },
+            {
+                "key": "ctrl+c",
+                "command": "execCopy"
+            },
+            {
+                "key": "ctrl+c",
+                "command": "keybindings.editor.copyKeybindingEntry",
+                "when": "inKeybindings && keybindingFocus"
+            },
+            {
+                "key": "ctrl+c",
+                "command": "editor.action.webvieweditor.copy",
+                "when": "!editorFocus && !inputFocus && activeEditor == 'WebviewEditor'"
+            },
+            {
+                "key": "ctrl+c",
+                "command": "filesExplorer.copy",
+                "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+            },
+            {
+                "key": "ctrl+v",
+                "command": "execPaste"
+            },
+            {
+                "key": "ctrl+v",
+                "command": "editor.action.clipboardPasteAction",
+                "when": "textInputFocus && !editorReadonly"
+            },
+            {
+                "key": "ctrl+v",
+                "command": "editor.action.webvieweditor.paste",
+                "when": "!editorFocus && !inputFocus && activeEditor == 'WebviewEditor'"
+            },
+            {
+                "key": "ctrl+v",
+                "command": "workbench.action.terminal.paste",
+                "when": "terminalFocus"
+            },
+            {
+                "key": "ctrl+v",
+                "command": "filesExplorer.paste",
+                "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+            },
+            {
+                "key": "ctrl+a",
+                "command": "workbench.action.terminal.selectAll",
+                "when": "terminalFocus"
+            },
+            {
+                "key": "ctrl+a",
+                "command": "editor.action.selectAll",
+                "when": "textInputFocus"
+            },
+            {
+                "key": "ctrl+a",
+                "command": "list.selectAll",
+                "when": "listFocus && listSupportsMultiselect && !inputFocus"
+            },
+            {
+                "key": "ctrl+a",
+                "command": "editor.action.webvieweditor.selectAll",
+                "when": "!editorFocus && !inputFocus && activeEditor == 'WebviewEditor'"
+            },
+            {
+                "key": "ctrl+y",
+                "command": "redo",
+                "when": "textInputFocus && !editorReadonly"
+            },
+            {
+                "key": "ctrl+z",
+                "command": "undo",
+                "when": "textInputFocus && !editorReadonly"
+            },
+            {
+                "mac": "ctrl+3",
                 "win": "ctrl+3",
                 "linux": "ctrl+3",
                 "key": "ctrl+3",
                 "command": "workbench.action.showCommands"
             },
             {
-                "mac": "cmd+shift+r",
+                "mac": "ctrl+shift+r",
                 "win": "ctrl+shift+r",
                 "linux": "ctrl+shift+r",
                 "key": "ctrl+shift+r",
@@ -47,42 +130,42 @@
                 "command": "workbench.view.search"
             },
             {
-                "mac": "cmd+shift+t",
+                "mac": "ctrl+shift+t",
                 "win": "ctrl+shift+t",
                 "linux": "ctrl+shift+t",
                 "key": "ctrl+shift+t",
                 "command": "workbench.action.showAllSymbols"
             },
             {
-                "mac": "cmd+l",
+                "mac": "ctrl+l",
                 "win": "ctrl+l",
                 "linux": "ctrl+l",
                 "key": "ctrl+l",
                 "command": "workbench.action.gotoLine"
             },
             {
-                "mac": "cmd+w",
+                "mac": "ctrl+w",
                 "win": "ctrl+w",
                 "linux": "ctrl+w",
                 "key": "ctrl+w",
                 "command": "workbench.action.closeActiveEditor"
             },
             {
-                "mac": "cmd+shift+s",
+                "mac": "ctrl+shift+s",
                 "win": "ctrl+shift+s",
                 "linux": "ctrl+shift+s",
                 "key": "ctrl+shift+s",
                 "command": "workbench.action.files.saveAll"
             },
             {
-                "mac": "cmd+alt+s",
+                "mac": "ctrl+alt+s",
                 "win": "ctrl+alt+s",
                 "linux": "ctrl+alt+s",
                 "key": "ctrl+alt+s",
                 "command": "workbench.action.files.saveAs"
             },
             {
-                "mac": "cmd+alt+t",
+                "mac": "ctrl+alt+t",
                 "win": "ctrl+alt+t",
                 "linux": "ctrl+alt+t",
                 "key": "ctrl+alt+t",
@@ -96,35 +179,35 @@
                 "command": "workbench.action.toggleSidebarVisibility"
             },
             {
-                "mac": "cmd+e",
+                "mac": "ctrl+e",
                 "win": "ctrl+e",
                 "linux": "ctrl+e",
                 "key": "ctrl+e",
                 "command": "workbench.action.openPreviousRecentlyUsedEditorInGroup"
             },
             {
-                "mac": "cmd+shift+w",
+                "mac": "ctrl+shift+w",
                 "win": "ctrl+shift+w",
                 "linux": "ctrl+shift+w",
                 "key": "ctrl+shift+w",
                 "command": "workbench.action.closeAllEditors"
             },
             {
-                "mac": "cmd+shift+f4",
+                "mac": "ctrl+shift+f4",
                 "win": "ctrl+shift+f4",
                 "linux": "ctrl+shift+f4",
                 "key": "ctrl+shift+f4",
                 "command": "workbench.action.closeAllEditors"
             },
             {
-                "mac": "cmd+f12",
+                "mac": "f12",
                 "win": "f12",
                 "linux": "f12",
                 "key": "f12",
                 "command": "workbench.action.focusActiveEditorGroup"
             },
             {
-                "mac": "cmd+shift+c",
+                "mac": "ctrl+shift+c",
                 "win": "ctrl+shift+c",
                 "linux": "ctrl+shift+c",
                 "key": "ctrl+shift+c",
@@ -132,7 +215,7 @@
                 "when": "editorTextFocus"
             },
             {
-                "mac": "cmd+shift+/",
+                "mac": "ctrl+shift+/",
                 "win": "ctrl+shift+/",
                 "linux": "ctrl+shift+/",
                 "key": "ctrl+shift+/",
@@ -140,7 +223,7 @@
                 "when": "editorTextFocus"
             },
             {
-                "mac": "cmd+alt+y",
+                "mac": "shift+alt+y",
                 "win": "shift+alt+y",
                 "linux": "shift+alt+y",
                 "key": "shift+alt+y",
@@ -148,7 +231,7 @@
                 "when": "editorTextFocus"
             },
             {
-                "mac": "cmd+alt+j",
+                "mac": "ctrl+alt+j",
                 "win": "ctrl+alt+j",
                 "linux": "ctrl+alt+j",
                 "key": "ctrl+alt+j",
@@ -156,7 +239,7 @@
                 "when": "editorTextFocus"
             },
             {
-                "mac": "cmd+o",
+                "mac": "ctrl+o",
                 "win": "ctrl+o",
                 "linux": "ctrl+o",
                 "key": "ctrl+o",
@@ -164,7 +247,7 @@
                 "when": "editorTextFocus"
             },
             {
-                "mac": "cmd+shift+f",
+                "mac": "ctrl+shift+f",
                 "win": "ctrl+shift+f",
                 "linux": "ctrl+shift+f",
                 "key": "ctrl+shift+f",
@@ -172,7 +255,7 @@
                 "when": "editorTextFocus && editorHasSelection"
             },
             {
-                "mac": "cmd+shift+f",
+                "mac": "ctrl+shift+f",
                 "win": "ctrl+shift+f",
                 "linux": "ctrl+shift+f",
                 "key": "ctrl+shift+f",
@@ -180,63 +263,42 @@
                 "when": "editorTextFocus && !editorHasSelection"
             },
             {
-                "mac": "cmd+alt+down",
-                "win": "ctrl+alt+down",
-                "linux": "ctrl+alt+down",
                 "key": "ctrl+alt+down",
                 "command": "editor.action.copyLinesDownAction",
                 "when": "editorTextFocus"
             },
             {
-                "mac": "cmd+alt+up",
-                "win": "ctrl+alt+up",
-                "linux": "ctrl+alt+up",
                 "key": "ctrl+alt+up",
                 "command": "editor.action.copyLinesUpAction",
                 "when": "editorTextFocus"
             },
             {
-                "mac": "alt+down",
-                "win": "alt+down",
-                "linux": "alt+down",
                 "key": "alt+down",
                 "command": "editor.action.moveLinesDownAction",
                 "when": "editorTextFocus"
             },
             {
-                "mac": "alt+up",
-                "win": "alt+up",
-                "linux": "alt+up",
                 "key": "alt+up",
                 "command": "editor.action.moveLinesUpAction",
                 "when": "editorTextFocus"
             },
             {
-                "mac": "cmd+d",
-                "win": "ctrl+d",
-                "linux": "ctrl+d",
                 "key": "ctrl+d",
                 "command": "editor.action.deleteLines",
                 "when": "editorTextFocus"
             },
             {
-                "mac": "cmd+shift+delete",
-                "win": "ctrl+shift+delete",
-                "linux": "ctrl+shift+delete",
                 "key": "ctrl+shift+delete",
                 "command": "deleteAllRight",
                 "when": "editorTextFocus"
             },
             {
-                "mac": "cmd+alt+r",
-                "win": "alt+shift+r",
-                "linux": "alt+shift+r",
                 "key": "alt+shift+r",
                 "command": "editor.action.rename",
                 "when": "editorTextFocus"
             },
             {
-                "mac": "cmd+shift+o",
+                "mac": "ctrl+shift+o",
                 "win": "ctrl+shift+o",
                 "linux": "ctrl+shift+o",
                 "key": "ctrl+shift+o",
@@ -244,7 +306,7 @@
                 "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
             },
             {
-                "mac": "cmd+space",
+                "mac": "ctrl+space",
                 "win": "ctrl+space",
                 "linux": "ctrl+space",
                 "key": "ctrl+space",
@@ -252,7 +314,7 @@
                 "when": "editorTextFocus"
             },
             {
-                "mac": "cmd+.",
+                "mac": "ctrl+.",
                 "win": "ctrl+.",
                 "linux": "ctrl+.",
                 "key": "ctrl+.",
@@ -268,7 +330,7 @@
                 "when": "editorTextFocus"
             },
             {
-                "mac": "cmd+1",
+                "mac": "ctrl+1",
                 "win": "ctrl+1",
                 "linux": "ctrl+1",
                 "key": "ctrl+1",
@@ -276,7 +338,7 @@
                 "when": "editorTextFocus"
             },
             {
-                "mac": "cmd+shift+g",
+                "mac": "ctrl+shift+g",
                 "win": "ctrl+shift+g",
                 "linux": "ctrl+shift+g",
                 "key": "ctrl+shift+g",
@@ -284,7 +346,7 @@
                 "when": "editorTextFocus"
             },
             {
-                "mac": "cmd+shift+b",
+                "mac": "ctrl+shift+b",
                 "win": "ctrl+shift+b",
                 "linux": "ctrl+shift+b",
                 "key": "ctrl+shift+b",
@@ -292,7 +354,7 @@
                 "when": "editorTextFocus"
             },
             {
-                "mac": "cmd+shift+x",
+                "mac": "ctrl+shift+x",
                 "win": "ctrl+shift+x",
                 "linux": "ctrl+shift+x",
                 "key": "ctrl+shift+x",
@@ -300,7 +362,7 @@
                 "when": "editorTextFocus"
             },
             {
-                "mac": "cmd+shift+y",
+                "mac": "ctrl+shift+y",
                 "win": "ctrl+shift+y",
                 "linux": "ctrl+shift+y",
                 "key": "ctrl+shift+y",
@@ -308,7 +370,7 @@
                 "when": "editorTextFocus"
             },
             {
-                "mac": "cmd+k",
+                "mac": "ctrl+k",
                 "win": "ctrl+k",
                 "linux": "ctrl+k",
                 "key": "ctrl+k",
@@ -316,7 +378,7 @@
                 "when": "editorTextFocus"
             },
             {
-                "mac": "cmd+shift+k",
+                "mac": "ctrl+shift+k",
                 "win": "ctrl+shift+k",
                 "linux": "ctrl+shift+k",
                 "key": "ctrl+shift+k",
@@ -324,7 +386,7 @@
                 "when": "editorTextFocus"
             },
             {
-                "mac": "alt+left",
+                "mac": "ctrl+left",
                 "win": "ctrl+left",
                 "linux": "ctrl+left",
                 "key": "ctrl+left",
@@ -332,7 +394,7 @@
                 "when": "textInputFocus"
             },
             {
-                "mac": "alt+right",
+                "mac": "ctrl+right",
                 "win": "ctrl+right",
                 "linux": "ctrl+right",
                 "key": "ctrl+right",
@@ -340,7 +402,7 @@
                 "when": "textInputFocus"
             },
             {
-                "mac": "alt+shift+left",
+                "mac": "ctrl+shift+left",
                 "win": "ctrl+shift+left",
                 "linux": "ctrl+shift+left",
                 "key": "ctrl+shift+left",
@@ -348,7 +410,7 @@
                 "when": "textInputFocus"
             },
             {
-                "mac": "alt+shift+right",
+                "mac": "ctrl+shift+right",
                 "win": "ctrl+shift+right",
                 "linux": "ctrl+shift+right",
                 "key": "ctrl+shift+right",
@@ -356,16 +418,10 @@
                 "when": "textInputFocus"
             },
             {
-                "mac": "cmd+alt+left",
-                "win": "alt+left",
-                "linux": "alt+left",
                 "key": "alt+left",
                 "command": "workbench.action.navigateBack"
             },
             {
-                "mac": "cmd+alt+right",
-                "win": "alt+right",
-                "linux": "alt+right",
                 "key": "alt+right",
                 "command": "workbench.action.navigateForward"
             },
@@ -378,7 +434,7 @@
                 "when": "inDebugMode"
             },
             {
-                "mac": "cmd+shift+f11",
+                "mac": "ctrl+f11",
                 "win": "ctrl+f11",
                 "linux": "ctrl+f11",
                 "key": "ctrl+f11",
@@ -410,12 +466,59 @@
                 "when": "inDebugMode"
             },
             {
-                "mac": "cmd+f2",
+                "mac": "ctrl+f2",
                 "win": "ctrl+f2",
                 "linux": "ctrl+f2",
                 "key": "ctrl+f2",
                 "command": "workbench.action.debug.stop",
                 "when": "inDebugMode"
+            },
+            {
+                "key": "ctrl+f",
+                "command": "actions.find"
+            },
+            {
+                "key": "ctrl+s",
+                "command": "workbench.action.files.save"
+            },
+            {
+                "key": "shift+enter",
+                "command": "editor.action.insertLineAfter",
+                "when": "editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "shift+ctrl+enter",
+                "command": "editor.action.insertLineBefore",
+                "when": "editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "ctrl+x",
+                "command": "execCut"
+            },
+            {
+                "key": "ctrl+x",
+                "command": "filesExplorer.cut",
+                "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+            },
+            {
+                "key": "ctrl+x",
+                "command": "editor.action.webvieweditor.cut",
+                "when": "!editorFocus && !inputFocus && activeEditor == 'WebviewEditor'"
+            },
+            {
+                "key": "ctrl+x",
+                "command": "editor.action.clipboardCutAction",
+                "when": "textInputFocus && !editorReadonly"
+            },
+            {
+                "key": "ctrl+enter",
+                "command": "workbench.action.submitComment",
+                "when": "commentEditorFocused"
+            },
+            {
+                "key": "ctrl+enter",
+                "command": "scm.acceptInput",
+                "when": "scmRepository"
             }
         ]
     },
