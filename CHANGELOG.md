@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.20.0 (February 5, 2020)
+* enhancement - keep all shortcuts same as eclipse on windows.
+* enhancement - add ctrl+c, ctrl+v and so on.
+
 ## 0.9.9 (November 20, 2018)
 * enhancement - added shift+alt+y toggle wordwrap.
 * enhancement - added ctrl+left/right jump one word to the left/right.
