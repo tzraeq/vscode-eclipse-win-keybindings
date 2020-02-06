@@ -11,15 +11,19 @@
         "Keymaps"
     ],
     "keywords": [
-        "keybindings",
-        "keymap"
+        "keybinding",
+        "keymap",
+        "eclipse",
+        "win",
+        "windows",
+        "shortcut"
     ],
     "icon": "vscode-eclipse-keybindings.png",
     "repository": {
         "type": "git",
         "url": "https://github.com/tzraeq/vscode-eclipse-win-keybindings.git"
     },
-    "homepage": "https://www.alphabot.com/",
+    "homepage": "https://github.com/tzraeq",
     "bugs": {
         "url": "https://github.com/tzraeq/vscode-eclipse-win-keybindings/issues"
     },
