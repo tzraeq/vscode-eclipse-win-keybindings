@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.21.0 (May 21, 2026)
+* enhancement - clean up keybindings and validate command ids against VS Code.
+* enhancement - align macOS close shortcuts and document system shortcut conflicts.
+* enhancement - remove obsolete webview editor bindings and conflicting `ctrl+space` suggest binding.
+
 ## 0.20.0 (February 5, 2020)
 * enhancement - keep all shortcuts same as eclipse on windows.
 * enhancement - add ctrl+c, ctrl+v and so on.
