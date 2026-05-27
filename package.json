@@ -50,11 +50,6 @@
             },
             {
                 "key": "ctrl+c",
-                "command": "editor.action.webvieweditor.copy",
-                "when": "!editorFocus && !inputFocus && activeEditor == 'WebviewEditor'"
-            },
-            {
-                "key": "ctrl+c",
                 "command": "filesExplorer.copy",
                 "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
             },
@@ -66,11 +61,6 @@
                 "key": "ctrl+v",
                 "command": "editor.action.clipboardPasteAction",
                 "when": "textInputFocus && !editorReadonly"
-            },
-            {
-                "key": "ctrl+v",
-                "command": "editor.action.webvieweditor.paste",
-                "when": "!editorFocus && !inputFocus && activeEditor == 'WebviewEditor'"
             },
             {
                 "key": "ctrl+v",
